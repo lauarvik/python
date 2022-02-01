@@ -3,10 +3,7 @@
 
 with open('lesson_5_2.txt', encoding='utf-8') as f:
     lc = wc_total = 0
-    while 1:
-        line = f.readline()
-        if not line:
-            break
+    for line in f:
         lc += 1
         wc = len(line.split())
         wc_total += wc
