@@ -5,10 +5,7 @@ import json
 
 firms = {}
 with open('lesson_5_7.txt', encoding='utf-8') as f:
-    while 1:
-        line = f.readline()
-        if not line:
-            break
+    for line in f:
         firm, form_of_ownership, revenue, outlay = line.split()
         #Прибыль компании
         profit = int(revenue) - int(outlay)
