@@ -11,10 +11,7 @@ def conv2int(s):
 
 disciplines = {}
 with open('lesson_5_6.txt', encoding='utf-8') as f:
-    while 1:
-        line = f.readline()
-        if not line:
-            break
+    for line in f:
         name, lec, pr, lab = line.split()
         summ = conv2int(lec) + conv2int(pr) + conv2int(lab)
         disciplines[name.strip(':')] = summ
