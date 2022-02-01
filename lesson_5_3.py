@@ -3,10 +3,7 @@
 
 employees = []
 with open('lesson_5_3.txt', encoding='utf-8') as f:
-    while 1:
-        line = f.readline()
-        if not line:
-            break
+    for line in f:
         employee = {}
         employee['name'], salary = line.split()
         employee['salary'] = float(salary)
