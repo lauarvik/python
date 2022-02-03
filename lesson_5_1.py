@@ -6,4 +6,4 @@ with open('lesson_5_1.txt', 'w', encoding='utf-8') as f:
         input_line = input('Введите строку: ')
         if not input_line:
             break
-        f.write(f'{input_line}\n')
+        print(input_line, file=f)
