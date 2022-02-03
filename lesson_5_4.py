@@ -6,7 +6,7 @@ map_dict = dict(One='Один', Two='Два', Three='Три', Four='Четыре
                 Eight='Восемь', Nine='Девять', Ten='Десять')
 with open('lesson_5_4_eng.txt') as f_in:
     with open('lesson_5_4_rus.txt', 'w', encoding='utf-8') as f_out:
-        for line in f:
+        for line in f_in:
             w1, rest = line.split(maxsplit=1)
             #обработку ошибки отсутвующих ключей в словаре, для простоты, опустим
-            f_out.write(' '.join([map_dict[w1], rest]))
+            f_out.write(f"{map_dict[w1]} {rest}")
