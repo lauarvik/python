@@ -11,8 +11,6 @@ class TrafficLight:
             sleep(delay)
             yield self.__color
 
-# я понимаю, что это бесконечный цикл, но
-# cветофофоры так и работают, останавливаясь только на техобслуживание)
 tl = TrafficLight()
 for color in tl.running():
     pass
